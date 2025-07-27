@@ -235,7 +235,7 @@ body {
     animation: fadeInRight 1s ease-out;
 }
 
-.ai-chat-preview {
+.college-preview {
     background: white;
     border-radius: 20px;
     padding: 1.5rem;
@@ -244,7 +244,7 @@ body {
     margin: 0 auto;
 }
 
-.chat-header {
+.preview-header {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -253,7 +253,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.chat-avatar {
+.college-logo {
     width: 40px;
     height: 40px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -273,36 +273,34 @@ body {
     animation: pulse 2s infinite;
 }
 
-.chat-messages {
+.college-features {
     space-y: 1rem;
 }
 
-.message {
-    margin-bottom: 1rem;
-}
-
-.message-content {
-    padding: 0.75rem 1rem;
-    border-radius: 18px;
-    max-width: 80%;
-    font-size: 0.9rem;
-}
-
-.ai-message .message-content {
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
     background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    color: #667eea;
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.feature-item span {
+    font-weight: 500;
     color: #333;
-    border-bottom-left-radius: 6px;
-}
-
-.user-message {
-    text-align: right;
-}
-
-.user-message .message-content {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    margin-left: auto;
-    border-bottom-right-radius: 6px;
 }
 
 /* Features Section */

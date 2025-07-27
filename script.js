@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Authentication status check
 function checkAuthStatus() {
-    const savedUser = localStorage.getItem('chatreal_user');
+    const savedUser = localStorage.getItem('educonnect_user');
     if (savedUser) {
         currentUser = JSON.parse(savedUser);
         showDashboard();
@@ -152,13 +152,13 @@ async function handleLogin(e) {
         await simulateApiCall(1000);
         
         // Check if user exists in localStorage
-        const users = JSON.parse(localStorage.getItem('chatreal_users') || '[]');
+        const users = JSON.parse(localStorage.getItem('educonnect_users') || '[]');
         const user = users.find(u => u.email === email && u.password === password);
         
         if (user) {
             // Successful login
             currentUser = user;
-            localStorage.setItem('chatreal_user', JSON.stringify(user));
+            localStorage.setItem('educonnect_user', JSON.stringify(user));
             isNewUser = false;
             
             closeModal();
@@ -203,7 +203,7 @@ async function handleRegister(e) {
         await simulateApiCall(1500);
         
         // Check if user already exists
-        const users = JSON.parse(localStorage.getItem('chatreal_users') || '[]');
+        const users = JSON.parse(localStorage.getItem('educonnect_users') || '[]');
         const existingUser = users.find(u => u.email === email);
         
         if (existingUser) {
@@ -222,8 +222,8 @@ async function handleRegister(e) {
         
         // Save to localStorage
         users.push(newUser);
-        localStorage.setItem('chatreal_users', JSON.stringify(users));
-        localStorage.setItem('chatreal_user', JSON.stringify(newUser));
+        localStorage.setItem('educonnect_users', JSON.stringify(users));
+        localStorage.setItem('educonnect_user', JSON.stringify(newUser));
         
         currentUser = newUser;
         isNewUser = true;
@@ -424,7 +424,7 @@ function showNotification(message, type = 'info') {
 function logout() {
     currentUser = null;
     isNewUser = false;
-    localStorage.removeItem('chatreal_user');
+    localStorage.removeItem('educonnect_user');
     showLandingPage();
     showNotification('You have been logged out', 'info');
 }
