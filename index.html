@@ -1,14 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ChatReal AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <h1>Hello</h1>
-</body>
+    <!-- Main Landing Page -->
+    <div id="landing-page" class="page active">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatReal AI</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-outline" onclick="openModal('login')">Login</button>
+                    <button class="btn btn-primary" onclick="openModal('register')">Sign Up</button>
+                </div>
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
 
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Experience the Future of <span class="gradient-text">AI Conversations</span></h1>
+                <p class="hero-description">
+                    ChatReal AI brings you intelligent, natural conversations powered by cutting-edge artificial intelligence. 
+                    Transform the way you communicate and get things done.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openModal('register')">
+                        <i class="fas fa-rocket"></i>
+                        Get Started Free
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="openModal('login')">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="ai-chat-preview">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>ChatReal AI</span>
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-content">Hello! How can I help you today?</div>
+                        </div>
+                        <div class="message user-message">
+                            <div class="message-content">Help me write a professional email</div>
+                        </div>
+                        <div class="message ai-message">
+                            <div class="message-content">I'd be happy to help! What's the email about?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose ChatReal AI?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Advanced AI</h3>
+                        <p>Powered by state-of-the-art language models for natural conversations</p>
+                        <button class="btn btn-ghost" onclick="openModal('register')">Learn More</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Private</h3>
+                        <p>Your conversations are encrypted and never stored without permission</p>
+                        <button class="btn btn-ghost" onclick="openModal('register')">Learn More</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Multi-Platform</h3>
+                        <p>Access ChatReal AI from any device, anywhere, anytime</p>
+                        <button class="btn btn-ghost" onclick="openModal('register')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Start Your AI Journey?</h2>
+                <p>Join thousands of users who are already experiencing the future of communication</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openModal('register')">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="openModal('login')">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatReal AI</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#" onclick="openModal('register')">Privacy</a>
+                        <a href="#" onclick="openModal('register')">Terms</a>
+                        <a href="#" onclick="openModal('register')">Support</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page">
+        <header class="dashboard-header">
+            <div class="dashboard-nav">
+                <div class="nav-brand">
+                    <i class="fas fa-robot"></i>
+                    <span>ChatReal AI</span>
+                </div>
+                <button class="btn btn-outline" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </header>
+        
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h1 id="welcome-message" class="welcome-text">Welcome User</h1>
+                <div class="logo-container">
+                    <div class="main-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatReal AI</span>
+                    </div>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-comments"></i>
+                        Start Chatting
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modal-title">Login</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                    <p class="auth-switch">
+                        Don't have an account? 
+                        <a href="#" onclick="switchModal('register')">Sign up here</a>
+                    </p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="auth-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirm Password</label>
+                        <input type="password" id="register-confirm" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                    <p class="auth-switch">
+                        Already have an account? 
+                        <a href="#" onclick="switchModal('login')">Sign in here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
